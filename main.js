@@ -35,7 +35,11 @@ let membri = [{
     immagine: "barbara-ramos-graphic-designer.jpg"
 }]
 
-console.log(membri);
+for (let i = 0; i < membri.length; i++) {
+    console.log("nome: " + membri[i].nome + " , Ruolo " + membri[i].ruolo);
+    
+    
+}
 
 
 
