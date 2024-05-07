@@ -1,45 +1,61 @@
 let membri = [{
     nome: "Wayne Barnett",
     ruolo: "Founder & CEO",
-    immagine: "wayne-barnett-founder-ceo.jpg"
+    immagine: "img/wayne-barnett-founder-ceo.jpg"
 },
 
 {
     nome: "Angela Caroll",
     ruolo: "Chief Editor",
-    immagine: "angela-caroll-chief-editor.jpg"
+    immagine: "img/angela-caroll-chief-editor.jpg"
 },
 
 {
 
     nome: "Walter Gordon",
     ruolo: "Office Manager",
-    immagine: "walter-gordon-office-manager.jpg"
+    immagine: "img/walter-gordon-office-manager.jpg"
 },
 
 {
     nome: "Angela Lopez",
     ruolo: "Media Manager",
-    immagine: "angela-lopez-social-media-manager.jpg"
+    immagine: "img/angela-lopez-social-media-manager.jpg"
 },
 
 {
     nome: "Scott Estrada",
     ruolo: "Developer",
-    immagine: "scott-estrada-developer.jpg"
+    immagine: "img/scott-estrada-developer.jpg"
 },
 
 {
     nome: "Barbara Ramos",
     ruolo: "Graphic Designer",
-    immagine: "barbara-ramos-graphic-designer.jpg"
+    immagine: "img/barbara-ramos-graphic-designer.jpg"
 }]
 
+let container = document.getElementById ("container")
+
 for (let i = 0; i < membri.length; i++) {
-    console.log("nome: " + membri[i].nome + " , Ruolo " + membri[i].ruolo);
-    
+    console.log("nome: " + membri[i].nome + ", Ruolo " + membri[i].ruolo + ", immagine " + membri[i].immagine); 
+    let elemento = createMemberHtml (membri[i])
+    container.innerHTML += elemento
     
 }
+
+function createMemberHtml(member) {
+    return ` <div class="member">
+                <h2>${member.nome}</h2>
+                <p>Ruolo: ${member.ruolo}</p>
+                <img src="${member.immagine}" alt="${member.immagine}">
+            </div>` 
+}
+
+
+
+
+
 
 
 
